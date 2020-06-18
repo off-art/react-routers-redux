@@ -6,7 +6,7 @@ class AddCat extends Component {
   render() {
     const { addCats, url } = this.props
     return (
-      <div>
+      <div className='add'>
         <h1>тут будут котэ</h1> <br />
         <button onClick={addCats}>Жми</button>
         <img src={url} alt="cat" />

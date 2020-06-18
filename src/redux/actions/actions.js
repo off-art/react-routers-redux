@@ -10,7 +10,7 @@ import {
   ADD_CAT,
 } from './actionType'
 
-import axios from 'axios';
+import axios from 'axios'
 
 export function add() {
   return {
@@ -52,6 +52,18 @@ export function addText(e) {
   }
 }
 
+export function addCat() {
+  return async (dispatch) => {
+    const response = await axios(
+      'https://api.thecatapi.com/v1/images/search?size=full',
+    )
+    const { url } = response.data[0]
+    dispatch({
+      type: ADD_CAT,
+      payload: url,
+    })
+  }
+}
 export function asyncAdd(number) {
   return (dispatch) => {
     setTimeout(() => {

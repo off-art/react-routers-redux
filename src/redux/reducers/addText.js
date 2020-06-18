@@ -2,7 +2,7 @@ import { ADD_TEXT, ADD_CAT } from '../actions/actionType'
 
 const initialState = {
   inputValue: '',
-  url: '123',
+  url: 'https://avatanplus.com/files/resources/original/57ac676215a3e1567973d729.png',
 }
 
 const addText = (state = initialState, action) => {
@@ -15,7 +15,7 @@ const addText = (state = initialState, action) => {
     case ADD_CAT:
       return {
         ...state,
-        url: action.url
+        url: action.payload
       }
     default:
       break
