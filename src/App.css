@@ -40,7 +40,7 @@
 .navbar ul {
   display: flex;
   flex-direction: row;
-  width: 20%;
+  width: 30%;
   justify-content: space-around;
   border: 1px solid #ccc;
   padding: 10px;
