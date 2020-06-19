@@ -8,6 +8,11 @@ import {
   ADD_FOUR,
   ADD_TEXT,
   ADD_CAT,
+  TEXT_REDUX,
+  ADD_REDUX,
+  REM_REDUX,
+  ADD_TEXT_REDUX,
+  ADD_CAT_REDUX
 } from './actionType'
 
 import axios from 'axios'
@@ -76,5 +81,44 @@ export function add2(number) {
   return {
     type: ADD2,
     value: number,
+  }
+}
+
+
+
+export function changeText(e) {
+  return {
+    type: TEXT_REDUX,
+    payload: e.target.value
+  }
+}
+
+export function addNum() {
+  return {
+    type: ADD_REDUX,
+  }
+}
+
+export function remNum() {
+  return {
+    type: REM_REDUX,
+  }
+}
+
+export function addTexts(e) {
+  return {
+    type: ADD_TEXT_REDUX,
+    payload: e.target.value
+  }
+}
+export function addMyCats(isLoading) {
+  isLoading = true
+  return async dispatch => {
+    const res = await axios('https://api.thecatapi.com/v1/images/search?size=full');
+    const { url } = res.data[0]
+    dispatch({
+      type: ADD_CAT_REDUX,
+      payload: url,
+    })
   }
 }

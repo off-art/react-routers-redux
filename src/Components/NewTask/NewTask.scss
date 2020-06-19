@@ -1,0 +1,52 @@
+.hw {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.dm {
+  &-counter {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-inputText {
+    display: flex;
+    flex-direction: column;
+    &_blockText {
+
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 10px;
+      height: 200px;
+      text-align: center;
+      box-shadow: 0 0 10px #ccc;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-cats {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    input {
+      width: 130px;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+}
